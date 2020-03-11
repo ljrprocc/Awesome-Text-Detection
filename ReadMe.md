@@ -86,7 +86,21 @@ M Liao, B Shi, X Bai, X Wang, W Liu， AAAI 2017
 - Code [Link]()
 - 简介：本文针对场景文本检测中存在的目标多尺度问题，提出了一种基于FCN的框架，根据不同word的长宽比来确定不同类型的文本实例。
 
+#### Textboxes++: A single-shot oriented scene text detector
 
+M Liao, B Shi, X Bai， TOIP 2018
+
+- Paper [Link](https://arxiv.org/pdf/1801.02765.pdf)
+- Code [Link](https://github.com/MhLiao/TextBoxes_plusplus)
+- 简介：本文在Textboxes的基础上，。。。
+
+#### Deep matching prior network: Toward tighter multi-oriented text detection
+
+Y Liu, L Jin， CVPR 2017
+
+- Paper [Link](http://openaccess.thecvf.com/content_cvpr_2017/papers/Liu_Deep_Matching_Prior_CVPR_2017_paper.pdf)
+- Code [Link](https://github.com/Yuliang-Liu/Curve-Text-Detector)
+- 简介：主要解决多方向的、不同大小颜色以及尺寸的text region，进行更紧密的bounding box的检测。另外，不同于传统的smooth L1 loss，本文使用了Ln loss，使得整个模型具有更强的鲁棒性和稳定性。
 
 ### 4. Segmentation-based
 
@@ -107,8 +121,6 @@ M Liao, B Shi, X Bai, X Wang, W Liu， AAAI 2017
 - [Scene Text Detection Resources](https://github.com/HCIILAB/Scene-Text-Detection)
 - [Scene Text Understanding](https://github.com/tangzhenyu/Scene-Text-Understanding)
 - [Scene Text Papers](https://github.com/Jyouhou/SceneTextPapers)
-
-
 
 
 
