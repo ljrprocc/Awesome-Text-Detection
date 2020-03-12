@@ -102,6 +102,14 @@ Y Liu, L Jin， CVPR 2017
 - Code [Link](https://github.com/Yuliang-Liu/Curve-Text-Detector)
 - 简介：主要解决多方向的、不同大小颜色以及尺寸的text region，进行更紧密的bounding box的检测。另外，不同于传统的smooth L1 loss，本文使用了Ln loss，使得整个模型具有更强的鲁棒性和稳定性。
 
+#### Rotation-sensitive regression for oriented scene text detection.
+
+M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
+
+- Paper [Link](http://openaccess.thecvf.com/content_cvpr_2018/papers/Liao_Rotation-Sensitive_Regression_for_CVPR_2018_paper.pdf)
+- Code [Link](https://github.com/MhLiao/RRD)
+- 简介：本文主要解决了multi-orient的文本检测问题。本文在传统的Bounding box回归的基础上增加了一个rotation-sensitive feature，旋转传统的卷积核。其在旋转的场景文本数据集中取得了较好的效果。
+
 ### 4. Segmentation-based
 
 
