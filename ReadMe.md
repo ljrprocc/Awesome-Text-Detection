@@ -118,7 +118,39 @@ M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
 
 ## 数据集
 
+目前的文本检测数据集还是有很多的，可以参考https://www.ctolib.com/HCIILAB-Scene-Text-Detection.html
+
 ### 1. 场景检测数据集
+
+#### ICDAR series(ICDAR 13/15/17/19)
+
+是ICDAR竞赛所提供的官方数据集，该比赛是有关端到端OCR的比赛，包括VQA，多语言检测、视频文本检测等多个项目。
+
+ICDAR数据提供的每个bounding box的标注样式为：
+
+$$\{x_1, y_1, x_2, y_2, x_3, y_3, x_4, y_4, l, c\}$$
+
+其中$(x_i, y_i)$表示第$i$个顶点，$l$表示的是何种语言，$c$是文字识别的结果。
+
+#### COCO-Text
+
+是基于COCO目标检测数据集的基础上，针对其中存在的场景文字而制作的文本检测数据集。主要是实际场景检测，为实拍场景。其每个bounding box的标注样式为：
+
+$$\{x_{min}, y_{min}, x_{max}, y_{max}\}$$
+
+这也是VOC、MS COCO等目标检测数据集所采用的标注方法，即仅仅标注bounding box的两个顶点，而默认其为矩形框。
+
+#### CTW
+
+其是由清华大学-腾讯联合实验室提出的中文实际场景检测的数据集，其以倾斜文本和任意形状的文本居多，包括街景、路标、车牌等。：
+
+
+
+#### SCUT-CTW1500
+
+1500张的中文街景文本图片，其包含14个顶点的多边形Bounding box标注。
+
+
 
 ### 2. 合成文本检测数据集
 
@@ -129,6 +161,9 @@ M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
 - [Scene Text Detection Resources](https://github.com/HCIILAB/Scene-Text-Detection)
 - [Scene Text Understanding](https://github.com/tangzhenyu/Scene-Text-Understanding)
 - [Scene Text Papers](https://github.com/Jyouhou/SceneTextPapers)
+- [Scene Text Detection Datasets](https://www.ctolib.com/HCIILAB-Scene-Text-Detection.html)
+
+
 
 
 
