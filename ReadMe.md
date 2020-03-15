@@ -112,6 +112,14 @@ M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
 
 ### 4. Segmentation-based
 
+#### Learning Shape-Aware Embedding for Scene Text Detection
+
+Z Tian, M Shu, P Lyu, R Li, C Zhou
+
+- Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Tian_Learning_Shape-Aware_Embedding_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
+- Code [Link]()
+- 简介：
+
 
 
 
@@ -142,17 +150,29 @@ $$\{x_{min}, y_{min}, x_{max}, y_{max}\}$$
 
 #### CTW
 
-其是由清华大学-腾讯联合实验室提出的中文实际场景检测的数据集，其以倾斜文本和任意形状的文本居多，包括街景、路标、车牌等。：
+其是由清华大学-腾讯联合实验室提出的中文实际场景检测的数据集，其以倾斜文本和任意形状的文本居多，包括街景、路标、车牌等。
 
 
 
 #### SCUT-CTW1500
 
-1500张的中文街景文本图片，其包含14个顶点的多边形Bounding box标注。
+1500张的中文街景文本图片，其包含14个顶点的多边形Bounding box标注。每张图片中包含至少一个弯曲实例，其中1000张是训练集，500张是测试集。
 
 
+
+#### MSRA-TD500
+
+包括300张训练图片以及200张训练图片，包括中英文的文本实例。他们的标注格式为：
+
+$$(idx, dl, x, y, w, h, \theta)$$
+
+其中$idx$表示的是图片的编号，$dl$表示difficult label，$\theta$表示与水平方向的夹角的余弦值。
 
 ### 2. 合成文本检测数据集
+
+### SynthText
+
+目前包括80w张图片，拥有
 
 ## 评估方法
 
