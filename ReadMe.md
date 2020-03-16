@@ -78,14 +78,6 @@ Z Tian, W Huang, T He, P He, Y Qiao,  ECCV 2016
 - Code [Link](https://github.com/opconty/pytorch_ctpn)
 - 简介：本文回归出$h \times 16$的小框，使用基于Character 的proposal并且使用了4倍上采样以适应多尺度的检测标准。在回归小框之后，使用BiLSTM回归出小框与小框之间的上下文关系，通过定义neighbour规则以确定text region的边界最终回归出Text Region。但其缺乏对于弯曲文本以及任意形状文本的检测方法。
 
-#### EAST: An Efficient and Accurate Scene Text Detector
-
-Xinyu Zhou, Cong Yao, He Wen, Yuzhi Wang, Shuchang Zhou, Weiran He, and Jiajun Liang, CVPR 2017
-
-- Paper [Link](EAST: An Efficient and Accurate Scene Text Detector)
-- Code [Link](https://github.com/argman/EAST)
-- 简介：
-
 #### Textboxes: A fast text detector with a single deep neural network
 
 M Liao, B Shi, X Bai, X Wang, W Liu， AAAI 2017
@@ -120,13 +112,21 @@ M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
 
 ### 4. Segmentation-based
 
+#### EAST: An Efficient and Accurate Scene Text Detector
+
+Xinyu Zhou, Cong Yao, He Wen, Yuzhi Wang, Shuchang Zhou, Weiran He, and Jiajun Liang, CVPR 2017
+
+- Paper [Link](EAST: An Efficient and Accurate Scene Text Detector)
+- Code [Link](https://github.com/argman/EAST)
+- 简介：本文使用了一种基于multi-channel的FCN的框架，得到了每张图片的text region的mask，通过NMS之后得到多方向性的文本行的bounding box。这种方法既可以做单词级别的预测也可以做文本行级别的预测。该方法在准确率和检测速度上都具有显著优势。
+
 #### Learning Shape-Aware Embedding for Scene Text Detection
 
 Z Tian, M Shu, P Lyu, R Li, C Zhou
 
 - Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Tian_Learning_Shape-Aware_Embedding_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
 - Code [Link]()
-- 简介：本文主要解决了文字检测问题中的弯曲文本检测问题，提出了一种Shape Aware Embedding的策略，通过学习这种loss，以实现同种Text instance在Embedding之后的距离小，而不同种的距离大。另外加上Segmentation Masks的Dice loss，最终实现整个网络结果的训练。
+- 简介：本文主要解决了文字检测问题中的弯曲文本检测问题，提出了一种Shape Aware Embedding的策略，通过学习这种loss，以实现同种Text instance在Embedding之后的距离小，而不同种的距离大。另外加上Segmentation Masks的Dice loss，最终实现整个网络结果的训练。本文主要预测1个binary score map, 4个bbox顶点以及1个角度，
 
 
 
@@ -191,6 +191,12 @@ $$(idx, dl, x, y, w, h, \theta)$$
 #### Precision
 
 #### Recall
+
+#### TIoU: Tightness-aware Evaluation Protocol for Scene Text Detection
+
+Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie
+
+
 
 ## 其他资源
 
