@@ -186,7 +186,7 @@ $$(idx, dl, x, y, w, h, \theta)$$
 
 ### SynthText
 
-目前包括80w张图片，拥有
+目前包括80w张图片，拥有在实际场景图片上
 
 ## 评估方法
 
@@ -203,7 +203,9 @@ $$(idx, dl, x, y, w, h, \theta)$$
 Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie, CVPR 2019
 
 - Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Tightness-Aware_Evaluation_Protocol_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
-- Code [Link]()
+- Code [Link](https:
+  //github.com/Yuliang-Liu/TIoU-metric.)
+- 
 
 
 
