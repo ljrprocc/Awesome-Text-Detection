@@ -122,13 +122,19 @@ Xinyu Zhou, Cong Yao, He Wen, Yuzhi Wang, Shuchang Zhou, Weiran He, and Jiajun L
 
 #### Learning Shape-Aware Embedding for Scene Text Detection
 
-Z Tian, M Shu, P Lyu, R Li, C Zhou
+Z Tian, M Shu, P Lyu, R Li, C Zhou，CVPR 2019
 
 - Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Tian_Learning_Shape-Aware_Embedding_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
 - Code [Link]()
-- 简介：本文主要解决了文字检测问题中的弯曲文本检测问题，提出了一种Shape Aware Embedding的策略，通过学习这种loss，以实现同种Text instance在Embedding之后的距离小，而不同种的距离大。另外加上Segmentation Masks的Dice loss，最终实现整个网络结果的训练。本文主要预测1个binary score map, 4个bbox顶点以及1个角度，
+- 简介：本文主要解决了文字检测问题中的弯曲文本检测问题，提出了一种Shape Aware Embedding的策略，通过学习这种loss，以实现同种Text instance在Embedding之后的距离小，而不同种的距离大。另外加上Segmentation Masks的Dice loss，最终实现整个网络结果的训练。本文主要预测1个binary score map, 4个bbox顶点以及1个角度的feature map，通过dice loss进行优化。
 
+#### Textsnake: A flexible representation for detecting text of arbitrary shapes
 
+S Long, J Ruan, W Zhang, X He， CVPR 2018
+
+- Paper [Link](http://openaccess.thecvf.com/content_ECCV_2018/papers/Shangbang_Long_TextSnake_A_Flexible_ECCV_2018_paper.pdf)
+- Code [Link](https://github.com/princewang1994/TextSnake.pytorch)
+- 简介：本文主要介绍了一种检测任意形状文本的方法。具体而言，在分割出文字区域之后，会根据文字中心位置同时回归出文字的center line，并根据其几何形状进行预测。主要回归的是文字的尺寸$r$以及倾角$\theta$。
 
 
 
@@ -194,7 +200,10 @@ $$(idx, dl, x, y, w, h, \theta)$$
 
 #### TIoU: Tightness-aware Evaluation Protocol for Scene Text Detection
 
-Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie
+Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie, CVPR 2019
+
+- Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Tightness-Aware_Evaluation_Protocol_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
+- Code [Link]()
 
 
 
