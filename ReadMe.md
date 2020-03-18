@@ -222,7 +222,7 @@ Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie, CV
 
 - Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Tightness-Aware_Evaluation_Protocol_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
 - Code [Link](https:
-  //github.com/Yuliang-Liu/TIoU-metric.)
+  //github.com/Yuliang-Liu/TIoU-metric)
 - 简介：本文在总结了IC03以及IC13/15的评估方法的基础上，指出了上述基于固定的IoU阈值确定True Positive bounding boxes的方法存在引入背景噪声、部分文字缺失的缺陷。因此本文引入了Tightness-aware的IoU评估方法，并提出了基于TIoU的Precision-Recall计算方法。这种评估方法在文本检测领域取得了较好的结果，由于其更紧的检测边界因此使用该种方法能更符合人的视觉直观感受。
 
 
