@@ -166,13 +166,9 @@ $$\{x_{min}, y_{min}, x_{max}, y_{max}\}$$
 
 其是由清华大学-腾讯联合实验室提出的中文实际场景检测的数据集，其以倾斜文本和任意形状的文本居多，包括街景、路标、车牌等。
 
-
-
 #### SCUT-CTW1500
 
 1500张的中文街景文本图片，其包含14个顶点的多边形Bounding box标注。每张图片中包含至少一个弯曲实例，其中1000张是训练集，500张是测试集。
-
-
 
 #### MSRA-TD500
 
@@ -186,17 +182,39 @@ $$(idx, dl, x, y, w, h, \theta)$$
 
 ### SynthText
 
-目前包括80w张图片，拥有在实际场景图片上
+目前包括80w张图片，其主要是在实拍场景的基础上添加的一些合成文字。一般合成数据集是用来预训练底层网络的。
+
+上述80w张合成数据集是官方提供的，官方也提供了自动生成合成文本数据集的代码：https://github.com/ankush-me/SynthText。
 
 ## 评估方法
 
-#### mAP
+目前文字检测采用的评估方法也是基于目标检测的。因此需要补充一下目标检测的几种评价指标。在目前有监督的目标检测方法中，通常在一张图片中标注出$M$个Ground truth bounding box，也就是$\mathcal{G} = \{G_1, G_2, \dots, G_M\}$，而检测模型通常在经过后处理后会生成$N$个预测的待选框，也就是$\mathcal{D} = \{D_1, D_2, \dots, D_N\}$，那么评估的主要目标是模型预测的框$D_j$与Ground Truth框$G_i$的相近程度。
 
-#### H-means
+<img src="pics\eval1.png" alt="img" style="zoom:80%;" />
+
+那么借助$IoU$的定义，True Positive（TP）以及False Positive（FP）的定义如图所示。另外，False Negative（FN） 定义为
+
+$$IoU(i,j) = 0,  \forall D_j \in \mathcal{D}$$
 
 #### Precision
 
+$$Precision = \frac{TP}{TP + FP}$$
+
 #### Recall
+
+$$Recall = \frac{TP}{TP+FN}$$
+
+#### H-means
+
+全称是harmonic mean（调和平均数）of precision and recall：
+
+$$Hmean = 2\frac{Recall \times Precision}{Recall + precision}$$
+
+这里的$Recall$以及$Precision$的定义如之前所述。
+
+#### mAP
+
+这是从目标检测中Average Precision的计算中得到的。
 
 #### TIoU: Tightness-aware Evaluation Protocol for Scene Text Detection
 
@@ -205,7 +223,7 @@ Yuliang Liu, Lianwen Jin, Zecheng Xie, Canjie Luo, Shuaitao Zhang, Lele Xie, CV
 - Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Tightness-Aware_Evaluation_Protocol_for_Scene_Text_Detection_CVPR_2019_paper.pdf)
 - Code [Link](https:
   //github.com/Yuliang-Liu/TIoU-metric.)
-- 
+- 简介：本文在总结了IC03以及IC13/15的评估方法的基础上，指出了上述基于固定的IoU阈值确定True Positive bounding boxes的方法存在引入背景噪声、部分文字缺失的缺陷。因此本文引入了Tightness-aware的IoU评估方法，并提出了基于TIoU的Precision-Recall计算方法。这种评估方法在文本检测领域取得了较好的结果，由于其更紧的检测边界因此使用该种方法能更符合人的视觉直观感受。
 
 
 
