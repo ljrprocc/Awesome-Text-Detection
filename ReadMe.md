@@ -110,6 +110,12 @@ M Liao, Z Zhu, B Shi, G Xia， CVPR 2018
 - Code [Link](https://github.com/MhLiao/RRD)
 - 简介：本文主要解决了multi-orient的文本检测问题。本文在传统的Bounding box回归的基础上增加了一个rotation-sensitive feature，旋转传统的卷积核。其在旋转的场景文本数据集中取得了较好的效果。
 
+#### Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
+
+- Paper [Link](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Look_More_Than_Once_An_Accurate_Detector_for_Text_of_CVPR_2019_paper.pdf)
+- Code [Link]()
+- 简介：本文提出了一种LOMO模型，用以解决矩形bbox的感受野的适应性问题，以及长文本和任意形状文本的问题。重点包括直接回归器（DR）, 迭代调整模块（IRM）以及形状表达模块（SEM）。该方法在弯曲文本数据集上取得了较好的结果。
+
 ### 4. Segmentation-based
 
 #### EAST: An Efficient and Accurate Scene Text Detector
